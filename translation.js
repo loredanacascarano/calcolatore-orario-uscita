@@ -1,8 +1,8 @@
 const translations = {
-    ba: {
+  ba: {
     title: "Calcolatòre d'a Sciutè",
     ingresso: "Orarije d'entrate",
-    recupero: "Orarije da recuperà",
+    recupero: "Ore ca si in debbit",
     pausa: "Orarije da pause",
     durataStandard: "Orarije standard d'u turne",
     straordinarioOggi: "Straordinàrie d'ògghe",
@@ -13,10 +13,10 @@ const translations = {
     messaggioTardi: (ora, straordinario) => `Potev' sci' a ${ora}... 🍹🐰\n Straordinàrie accumulàte oggi: ${straordinario}`,
     straordinarioTotaleLabel: "Straordinàrie d'ògghe"
   },
-    mi: {
+  mi: {
     title: "Calculadur d'ora de sciò",
     ingresso: "Ora d'entrada",
-    recupero: "Temp da recuperà",
+    recupero: "Ora in debit",
     pausa: "Temp de pausa",
     durataStandard: "Durada standard del turn",
     straordinarioOggi: "Straordinari d'incö",
@@ -30,7 +30,7 @@ const translations = {
   ve: {
     title: "Calcolador de l'Ora de 'ndar via",
     ingresso: "Ora d'entrada",
-    recupero: "Tempo da recuperar",
+    recupero: "Ore in debito",
     pausa: "Tempo de pausa",
     durataStandard: "Durada standard del turno",
     straordinarioOggi: "Straordinario de 'ncò",
@@ -44,7 +44,7 @@ const translations = {
   it: {
     title: "Calcolatore Orario di Uscita",
     ingresso: "Orario di ingresso",
-    recupero: "Ore da recuperare",
+    recupero: "Ore in debito",
     pausa: "Ore di pausa",
     durataStandard: "Durata standard di lavoro",
     straordinarioOggi: "Ore straordinario da fare",
@@ -58,7 +58,7 @@ const translations = {
   pa: {
     title: "Calculaturi d'u tempu pi nesciri",
     ingresso: "Orariu d'intrata",
-    recupero: "U tempu ca hai a ricuperari",
+    recupero: "Ore ca si in debbitu",
     pausa: "U tempu di pausa",
     durataStandard: "Orariu standard d'u turnu",
     straordinarioOggi: "Straordinariu d'oggi",
@@ -72,7 +72,7 @@ const translations = {
   en: {
     title: "Exit Time Calculator",
     ingresso: "Start time",
-    recupero: "Time to recover",
+    recupero: "Hours in debt",
     pausa: "Break time",
     durataStandard: "Standard work duration",
     straordinarioOggi: "Extra hours today",
@@ -86,7 +86,7 @@ const translations = {
   de: {
     title: "Berechnung der Ausstiegszeit",
     ingresso: "Startzeit",
-    recupero: "Nachzuholende Zeit",
+    recupero: "Zeitschuld",
     pausa: "Pausenzeit",
     durataStandard: "Standardarbeitszeit",
     straordinarioOggi: "Überstunden heute",
@@ -100,7 +100,7 @@ const translations = {
   ru: {
     title: "Калькулятор времени выхода",
     ingresso: "Время начала работы",
-    recupero: "Время для отработки",
+    recupero: "Долг по времени",
     pausa: "Время перерыва",
     durataStandard: "Стандартная продолжительность работы",
     straordinarioOggi: "Сверхурочные за сегодня",
@@ -114,7 +114,7 @@ const translations = {
   pl: {
     title: "Kalkulator czasu wyjścia",
     ingresso: "Czas rozpoczęcia",
-    recupero: "Czas do odpracowania",
+    recupero: "Godziny do odpracowania",
     pausa: "Przerwa",
     durataStandard: "Standardowy czas pracy",
     straordinarioOggi: "Nadgodziny dzisiaj",
@@ -128,7 +128,7 @@ const translations = {
   hu: {
     title: "Kilépési idő kalkulátor",
     ingresso: "Munkakezdés időpontja",
-    recupero: "Ledolgozandó idő",
+    recupero: "Hátralévő idő",
     pausa: "Szünet ideje",
     durataStandard: "Standard munkaidő",
     straordinarioOggi: "Mai túlóra",
@@ -142,7 +142,7 @@ const translations = {
   sq: {
     title: "Kalkulatori i Kohës së Daljes",
     ingresso: "Ora e hyrjes",
-    recupero: "Koha për të rikuperuar",
+    recupero: "Orë në borxh",
     pausa: "Koha e pushimit",
     durataStandard: "Kohë pune standarde",
     straordinarioOggi: "Orë jashtë orarit sot",
