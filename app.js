@@ -5,17 +5,19 @@ function calcolaOrarioUscita() {
     const pausa = document.getElementById('pausa').value;
     const straordinarioOggi = document.getElementById('straordinarioOggi').value;
     const straordinarioTotale = document.getElementById('straordinarioTotale').value;
+    const standard = document.getElementById('standard').value;
 
     function parseTimeToSeconds(time) {
         const [h, m] = time.split(':').map(Number);
         return h * 3600 + m * 60;
     }
 
-    const setteQuarantadue = 7 * 3600 + 42 * 60; // 7 ore e 42 minuti
+    const standardSec = parseTimeToSeconds(standard);
     const mezzora = 30 * 60;
 
     const ingressoSec = parseTimeToSeconds(ingresso);
     const recuperoSec = parseTimeToSeconds(recupero);
+    
     const pausaSec = parseTimeToSeconds(pausa);
     const straordinarioOggiSec = parseTimeToSeconds(straordinarioOggi);
     const straordinarioTotaleSec = parseTimeToSeconds(straordinarioTotale);
@@ -24,7 +26,7 @@ function calcolaOrarioUscita() {
     oggi.setHours(0, 0, 0, 0);
     const ingressoDate = new Date(oggi.getTime() + ingressoSec * 1000);
 
-    let uscitaParziale = new Date(ingressoDate.getTime() + (setteQuarantadue + recuperoSec + straordinarioOggiSec) * 1000);
+    let uscitaParziale = new Date(ingressoDate.getTime() + (standardSec + recuperoSec + straordinarioOggiSec) * 1000);
     let uscitaTotale = (pausa === "00:00") ? new Date(uscitaParziale.getTime() + mezzora * 1000) : new Date(uscitaParziale.getTime() + pausaSec * 1000);
 
     document.getElementById('uscita').textContent = uscitaTotale.toTimeString().slice(0,5);
