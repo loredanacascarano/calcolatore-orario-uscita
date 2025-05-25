@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore Orario di Uscita - PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcolatore Orario di Uscita</h1>
+        <label>Orario di ingresso: <input type="time" id="ingresso" value="08:00"></label>
+        <label>Ore da recuperare: <input type="time" id="recupero" value="00:30"></label>
+        <label>Ore di pausa: <input type="time" id="pausa" value="00:00"></label>
+        <label>Ore straordinario da fare: <input type="time" id="straordinarioOggi" value="00:00"></label>
+        <label>Ore straordinario accumulato: <input type="time" id="straordinarioTotale" value="00:00"></label>
+        <button onclick="calcolaOrarioUscita()">Calcola Orario di Uscita</button>
+        <div class="output">
+            <p><strong>Orario di Uscita:</strong> <span id="uscita"></span></p>
+            <p id="messaggio"></p>
+            <img id="immagine" src="" alt="" hidden>
+            <p><strong>Straordinario Totale:</strong> <span id="nuovoStraordinario"></span></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
