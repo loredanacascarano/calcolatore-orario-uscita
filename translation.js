@@ -29,7 +29,7 @@ const translations = {
   },
   ve: {
     title: "Calcolador de l'Ora de 'ndar via",
-    ingresso: "Ora d'intrada",
+    ingresso: "Ora d'entrada",
     recupero: "Tempo da recuperar",
     pausa: "Tempo de pausa",
     durataStandard: "Durada standard del turno",
@@ -38,7 +38,7 @@ const translations = {
     calcola: "Calcola l'ora de 'ndar via",
     uscita: "Ora de 'ndar via",
     messaggioAttendi: ora => `Speta fin a le ${ora}... El Conièo Bian l'è ancora a bevarse el cafè! ☕🐰`,
-    messaggioTardi: (ora, straordinario) => `Te podéa 'ndar via alle ${ora}... 🍹🐰\n Straordinario de 'ncò: ${straordinario}`,
+    messaggioTardi: (ora, straordinario) => `Te podevi 'ndar via alle ${ora}... 🍹🐰\n Straordinario de 'ncò: ${straordinario}`,
     straordinarioTotaleLabel: "Straordinario de 'ncò"
   },
   it: {
