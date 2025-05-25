@@ -1,4 +1,32 @@
 const translations = {
+    ba: {
+    title: "Calcolatòre d'a Sciutè",
+    ingresso: "Orarije d'entrate",
+    recupero: "Orarije da recuperà",
+    pausa: "Orarije da pause",
+    durataStandard: "Orarije standard d'u turne",
+    straordinarioOggi: "Straordinàrie d'ògghe",
+    straordinarioTotale: "Straordinàrie accumulàte",
+    calcola: "Calcol' a sciutè",
+    uscita: "Orarije d'a sciutè",
+    messaggioAttendi: ora => `Aspètt' fin a ${ora}... U cunigliòne bbiangh stè ancora a bbivere 'u cafè! ☕🐰`,
+    messaggioTardi: (ora, straordinario) => `Potev' sci' a ${ora}... 🍹🐰\n Straordinàrie accumulàte oggi: ${straordinario}`,
+    straordinarioTotaleLabel: "Straordinàrie d'ògghe"
+  },
+    mi: {
+    title: "Calculadur d'ora de sciò",
+    ingresso: "Ora d'entrada",
+    recupero: "Temp da recuperà",
+    pausa: "Temp de pausa",
+    durataStandard: "Durada standard del turn",
+    straordinarioOggi: "Straordinari d'incö",
+    straordinarioTotale: "Straordinari accumulà",
+    calcola: "Calcula l'ora de sciò",
+    uscita: "Ora de sciò",
+    messaggioAttendi: ora => `Aspetta fina a ${ora}... El Conigli Bianch l'è ancora lì che beve el caffè! ☕🐰`,
+    messaggioTardi: (ora, straordinario) => `Pudiv sciò a ${ora}... 🍹🐰\n Straordinari d'incö: ${straordinario}`,
+    straordinarioTotaleLabel: "Straordinari d'incö"
+  },
   it: {
     title: "Calcolatore Orario di Uscita",
     ingresso: "Orario di ingresso",
