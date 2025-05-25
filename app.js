@@ -1,5 +1,8 @@
 
-function calcolaOrarioUscita() {
+function calcolaOrarioUscita(lang = "it") {
+    const t = translations[lang];
+    console.log(t); // Funziona qui
+
     const ingresso = document.getElementById('ingresso').value;
     const recupero = document.getElementById('recupero').value;
     const pausa = document.getElementById('pausa').value;
@@ -32,17 +35,41 @@ function calcolaOrarioUscita() {
     document.getElementById('uscita').textContent = uscitaTotale.toTimeString().slice(0,5);
 
     const oraCorrente = new Date();
+    const ora = uscitaTotale.toTimeString().slice(0,5);
+
+    let straordinarioAggiuntivo = 0;
+    let oreAgg;
+    let minutiAGG;
+    let straordinarioAggFormattato;
+    if (oraCorrente > uscitaTotale) {
+         straordinarioAggiuntivo = Math.floor((oraCorrente - uscitaTotale) / 1000);
+         oreAgg = String(Math.floor(straordinarioAggiuntivo / 3600)).padStart(2, '0');
+         minutiAGG = String(Math.floor((straordinarioAggiuntivo % 3600) / 60)).padStart(2, '0');
+         straordinarioAggFormattato = `${oreAgg}:${minutiAGG}`;
+    }
     if (uscitaTotale > oraCorrente) {
-        document.getElementById('messaggio').textContent = `Aspetta l'ora ${uscitaTotale.toTimeString().slice(0,5)}... Il Bianconiglio non ha ancora finito il cappuccino! ☕🐰`;
-        document.getElementById('immagine').src = 'images/bianconiglio_triste.png';
+       document.getElementById('messaggio').textContent = t.messaggioAttendi(ora);
+       document.getElementById('immagine').src = 'images/bianconiglio_triste.png';
     } else {
-        document.getElementById('messaggio').textContent = `Potevi uscire alle ${uscitaTotale.toTimeString().slice(0,5)}... 🍹🐰`;
+        straordinarioOggiCalcolatoSec = Math.floor((oraCorrente - uscitaTotale) / 1000);
+    
+       
+        document.getElementById('messaggio').textContent = t.messaggioTardi(ora, straordinarioAggFormattato);
         document.getElementById('immagine').src = 'images/bianconiglio_felice.png';
+
     }
     document.getElementById('immagine').hidden = false;
-
-    const nuovoStraordinarioSec = straordinarioTotaleSec + straordinarioOggiSec;
+    const nuovoStraordinarioSec = straordinarioTotaleSec + straordinarioOggiSec + straordinarioAggiuntivo;
     const ore = String(Math.floor(nuovoStraordinarioSec / 3600)).padStart(2, '0');
     const minuti = String(Math.floor((nuovoStraordinarioSec % 3600) / 60)).padStart(2, '0');
     document.getElementById('nuovoStraordinario').textContent = `${ore}:${minuti}`;
+
 }
+
+
+
+// All'avvio della pagina, imposta la lingua di default (Italiano)
+window.addEventListener('load', () => {
+  calcolaOrarioUscita();
+});
+
