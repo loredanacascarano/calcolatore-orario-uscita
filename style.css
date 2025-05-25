@@ -30,4 +30,8 @@ button:hover {
 }
 img {
     margin-top: 10px;
+    max-width: 150px;   /* Puoi cambiare la dimensione */
+    height: auto;       /* Mantiene le proporzioni */
+    border-radius: 10px; /* Opzionale: angoli arrotondati */
 }
+
